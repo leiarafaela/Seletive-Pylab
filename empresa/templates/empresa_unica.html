@@ -26,7 +26,7 @@
 
             <div class="col-md">
                 <h1 class="titulo">{{empresa.nome}}</h1>
-                <p class="paragrafo">{{empresa.endereço}}</p>
+                <p class="paragrafo">{{empresa.cidade}}</p>
             </div>
 
 
@@ -173,8 +173,7 @@
                             <select name="empresa" class="form-select">
                                 {% for empresa_iter in empresas %}
                                     <option {% if empresa.id == empresa_iter.id %}selected{% endif %} value="{{empresa_iter.id}}">{{empresa_iter}}</option>
-                                {% endfor %}
-                                                                                                                                 
+                                {% endfor %}                                                                                               
                             </select>
                         </div>
        

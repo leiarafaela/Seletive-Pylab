@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
 }
 
 .box {
@@ -11,18 +12,20 @@
     width: 80vw;
     background: #fff;
     box-shadow: 4px 4px 10px rgba(0,0,0,.3);
+    border-radius: 10px;
 }
 
 
 .titulo{
     display: inline;
+    font-family: sans-serif;
 }
 
 .btn-nova-empresa{
     float: right;
     text-decoration: none;
     color: white;
-    background-color: #7D2948;
+    background-color: #0D3878;
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
@@ -31,13 +34,13 @@
 .btn-nova-empresa:hover{
     color: white;
     text-decoration: none;
-    background-color: #631f38;
+    background-color: #0D3878;
 }
 
 .btn-excluir:hover{
     color: white;
     text-decoration: none;
-    background-color: #631f38;
+    background-color: #0D3878;
 }
 
 .header-box{
@@ -73,8 +76,17 @@
 .btn-excluir{
     text-decoration: none;
     color: white;
-    background-color: #7D2948;
+    background-color: #0D3878;
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
+}
+
+.teste{
+    text-decoration: none;
+    color: black;
+}
+
+.form-control{
+    text-decoration: none;
 }

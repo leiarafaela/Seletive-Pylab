@@ -18,7 +18,7 @@
                     {% endfor %}
                 {% endif %}
                 <h2 class="titulo">Gerenciar empresas</h2>
-                <a href="{% url 'nova_empresa' %}" class="btn-nova-empresa">Nova empresa</a>
+                <a href="{% url 'nova_empresa' %}" class="btn-nova-empresa">Cadastrar empresa</a>
             </div>
             <div class="borda-box"></div>
             <div class="body-box">
@@ -47,18 +47,17 @@
                 <table class="tabela" cellpadding="20">
                     <tr>
                         <th>Nome</th>
-                        <th>Endereço</th>
+                        <th>Cidade</th>
                         <th>Tecnologias usadas</th>
                         <th>Quantidade de vagas</th>
-                        <th>Ação</th>
                     </tr>
 
                         {% for empresa in empresas %}
                             <tr {% if not forloop.counter|is_par %} class="tabela-linha" {% endif %}>
                                 <td>
-                                    <a href="{% url 'empresa_unica' empresa.id %}">{{empresa.nome}}</a>
+                                    <a href="{% url 'empresa_unica' empresa.id %}" class="teste">{{empresa.nome}}</a>
                                 </td>
-                                <td>{{empresa.endereço}}</td>
+                                <td>{{empresa.cidade}}</td>
                                 <td>
                                     <select class="form-select"> 
                                         {% for tech in empresa.tecnologias.all %}      
@@ -75,7 +74,7 @@
                                     &nbsp&nbsp{{empresa.qtd_vagas}} VAGAS
                                 </td>
                                 <td>
-                                    <a href="{% url 'excluir_empresa' empresa.id %}" class="btn-excluir">Excluir empresa</a>
+                                    <a href="{% url 'excluir_empresa' empresa.id %}" class="btn-excluir">Excluir</a>
                                 </td>
                             </tr>
                         {% endfor%}

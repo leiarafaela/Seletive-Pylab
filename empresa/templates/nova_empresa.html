@@ -26,20 +26,20 @@
                 <form action="{% url 'nova_empresa' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
                     <div class="row">
                         <div class="col-md">
-                            <label>Nome:</label>
+                            <label>Nome:*</label>
                             <input type="text" class="form-control" name="nome" placeholder="Digite seu nome...">
                         </div>
 
                         <div class="col-md">
-                            <label>E-mail:</label>
-                            <input type="email" class="form-control" name="email" placeholder="email@gmail.com">
+                            <label>E-mail:*</label>
+                            <input type="email" class="form-control" name="email" placeholder="email@email.com">
                         </div>
 
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-md">
-                            <label>Cidade:</label>
+                            <label>Cidade:*</label>
                             <input type="text" class="form-control" name="cidade" placeholder="Digite a cidade da empresa...">
                         </div>
 
@@ -52,7 +52,7 @@
                     <br>
                     <div class="row">
                         <div class="col-md">
-                            <label>Nicho de mercado:</label>
+                            <label>Nicho de mercado:*</label>
                             <select class="form-control" name="nicho">
                                 <option value="M">Marketing</option>
                                 <option value="N">Nutrição</option>
@@ -63,7 +63,7 @@
                     <br>
                     <div class="row">
                         <div class="col-md">
-                            <label>Tecnologias usadas:</label>
+                            <label>Tecnologias usadas:*</label>
                             <select class="form-control" name="tecnologias" multiple> 
                                 {% for tech in techs %}                               
                                 <option value="{{tech.id}}">{{tech}}</option>
